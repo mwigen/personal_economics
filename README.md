@@ -40,7 +40,7 @@ current session.
 After recategorizing selected products in the table, use **Download mappings**
 to save an updated `product_overrides.json`.
 
-On the hosted site, **Submit as pull request** sends only the selected product
+On the hosted site, **Send category suggestion** sends only the selected product
 names and proposed mappings to the project's Cloudflare Worker. The Worker
 creates a branch and opens a pull request against `main`; it does not upload
 transaction records, prices, dates, addresses, or imported files. A repository

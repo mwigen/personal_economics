@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Personal economics</title>
-  <link rel="stylesheet" href="web/styles.css">
+  <link rel="stylesheet" href="web/styles.css?v=2">
 </head>
 <body>
   <main class="shell">
@@ -62,7 +62,7 @@
         <button id="applyMapping" class="primary" type="button" disabled>Apply to selected</button>
         <button id="exportSelected" type="button" disabled>Export selected CSV</button>
         <button id="downloadMappings" type="button" disabled>Download mappings</button>
-        <button id="submitProposal" class="primary" type="button" disabled>Submit as pull request</button>
+        <button id="submitProposal" class="primary" type="button" disabled>Send category suggestion</button>
         <p id="mappingStatus">Select one or more purchase line items below to recategorise them.</p>
         <p id="proposalStatus" class="proposal-status" role="status" aria-live="polite"></p>
       </div>
@@ -92,7 +92,7 @@
       <p>The app automatically reads the five resource files in <code>config/</code>. Data files are never loaded automatically: add them with the file picker or drop them onto the page. Imported data is retained in this browser.</p>
     </details>
   </main>
-  <script defer src="web/default-config.js"></script>
-  <script defer src="web/app.js"></script>
+  <script defer src="web/default-config.js?v=2"></script>
+  <script defer src="web/app.js?v=2"></script>
 </body>
 </html>

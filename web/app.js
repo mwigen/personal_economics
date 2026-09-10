@@ -268,7 +268,7 @@ function updateMappingState() {
   $('exportSelected').disabled = !selectedItems.size;
   $('downloadMappings').disabled = !pendingOverrides.size;
   $('submitProposal').disabled = !pendingOverrides.size || submittingProposal;
-  $('submitProposal').textContent = submittingProposal ? 'Submitting…' : 'Submit as pull request';
+  $('submitProposal').textContent = submittingProposal ? 'Sending…' : 'Send category suggestion';
   $('mappingStatus').textContent = pendingOverrides.size
     ? `${number.format(selectedItems.size)} selected; ${number.format(pendingOverrides.size)} product mapping change(s) ready.`
     : selectedItems.size ? `${number.format(selectedItems.size)} purchase line item(s) selected.` : 'Select one or more purchase line items below to recategorise them.';
@@ -309,14 +309,14 @@ async function submitMappings() {
 
   const count = pendingOverrides.size;
   const confirmed = window.confirm(
-    `Create a public pull request containing ${number.format(count)} product name${count === 1 ? '' : 's'} and the proposed category mappings?\n\nNo transaction records, prices, dates, or addresses will be sent.`,
+    `Send ${number.format(count)} category suggestion${count === 1 ? '' : 's'} for review?\n\nThe selected product name${count === 1 ? '' : 's'} and category mappings will be public. No transaction records, prices, dates, or addresses will be sent.`,
   );
   if (!confirmed) return;
 
   const status = $('proposalStatus');
   submittingProposal = true;
   status.className = 'proposal-status';
-  status.textContent = 'Creating pull request…';
+  status.textContent = 'Sending category suggestion…';
   updateMappingState();
 
   try {
@@ -333,12 +333,12 @@ async function submitMappings() {
     link.href = result.pullRequestUrl;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.textContent = result.pullRequestNumber ? `pull request #${result.pullRequestNumber}` : 'the pull request';
-    status.replaceChildren(document.createTextNode('Created '), link, document.createTextNode('. It is ready for review.'));
+    link.textContent = result.pullRequestNumber ? `suggestion #${result.pullRequestNumber}` : 'the suggestion on GitHub';
+    status.replaceChildren(document.createTextNode('Sent '), link, document.createTextNode(' for review.'));
     status.className = 'proposal-status success';
     pendingOverrides.clear();
   } catch (error) {
-    status.textContent = `Could not create the pull request: ${error.message}`;
+    status.textContent = `Could not send the suggestion: ${error.message}`;
     status.className = 'proposal-status error';
   } finally {
     submittingProposal = false;
