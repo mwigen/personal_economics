@@ -4,6 +4,10 @@ A private, static browser application for exploring grocery purchase exports.
 It has no build step, package installation, Python runtime, or server-side
 component. Imported data is processed locally and stored only in the browser.
 
+The deployed application displays its current version below the page title.
+Asset URLs use the same version number so browsers load the matching JavaScript
+and stylesheet after an update.
+
 ## Run locally
 
 Open `index.html`, then add or drag-and-drop one or more supported JSON files:
