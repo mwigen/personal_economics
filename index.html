@@ -62,7 +62,9 @@
         <button id="applyMapping" class="primary" type="button" disabled>Apply to selected</button>
         <button id="exportSelected" type="button" disabled>Export selected CSV</button>
         <button id="downloadMappings" type="button" disabled>Download mappings</button>
+        <button id="submitProposal" class="primary" type="button" disabled>Submit as pull request</button>
         <p id="mappingStatus">Select one or more purchase line items below to recategorise them.</p>
+        <p id="proposalStatus" class="proposal-status" role="status" aria-live="polite"></p>
       </div>
       <div class="table-wrap">
         <table>
@@ -82,7 +84,7 @@
           <tbody id="rows"></tbody>
         </table>
       </div>
-      <p class="privacy-note">Imported data stays in this browser and is never uploaded by the application.</p>
+      <p class="privacy-note">Imported transaction data stays in this browser. Submitting a proposal sends only the selected product names and category mappings, which become public in a GitHub pull request.</p>
     </section>
 
     <details class="panel help">
