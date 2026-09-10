@@ -1,0 +1,24 @@
+{
+  "regex_replacements": [
+    {
+      "pattern": "\\b\\d+\\s*[Xx]\\s*\\d+(?:[.,]\\d+)?\\s*(?:ML|CL|DL|L|G|KG|GR|STK|PK)?\\b",
+      "replacement": ""
+    },
+    {
+      "pattern": "\\b\\d+(?:[.,]\\d+)?\\s*(?:ML|CL|DL|L|G|KG|GR|STK|ST|PK|PACK)\\b",
+      "replacement": ""
+    },
+    {
+      "pattern": "\\b\\d+\\s*PK\\b",
+      "replacement": ""
+    },
+    {
+      "pattern": "\\bCA\\.?\\s*\\d+(?:[.,]\\d+)?\\s*(?:G|KG)\\b",
+      "replacement": ""
+    },
+    {
+      "pattern": "\\b\\d+(?:[.,]\\d+)?\\s*%\\b",
+      "replacement": ""
+    }
+  ]
+}

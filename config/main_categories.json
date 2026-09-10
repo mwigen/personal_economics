@@ -1,0 +1,248 @@
+{
+  "default_category": "Misc food / unclear",
+  "exact_mappings": {
+    "102614": "Snacks & sweets",
+    "102517": "Snacks & sweets",
+    "102516": "Snacks & sweets",
+    "103615": "Snacks & sweets",
+    "102518": "Snacks & sweets",
+    "103612": "Snacks & sweets",
+    "103614": "Snacks & sweets",
+    "151018": "Non-alcoholic drinks",
+    "181416": "Baby & child",
+    "101913": "Breakfast cereals",
+    "111314": "Meat & poultry",
+    "112021": "Pantry & cooking",
+    "112023": "Pantry & cooking",
+    "101817": "Bread & bakery",
+    "101819": "Pantry & cooking",
+    "101818": "Bread & bakery",
+    "191511": "Household & hygiene",
+    "182332": "Non-grocery / seasonal",
+    "IKKE I BRUK": "Bread & bakery",
+    "DAGSFERSK LOKAL": "Bread & bakery",
+    "BARE SNITT": "Non-grocery / seasonal",
+    "BLADER": "Non-grocery / seasonal",
+    "TRAN": "Health & supplements",
+    "HÅR": "Household & hygiene",
+    "DEODORANT": "Household & hygiene",
+    "ANSIKTARTIKLER": "Household & hygiene",
+    "BARBERARTIKLER": "Household & hygiene",
+    "BIND": "Household & hygiene",
+    "TAMPONG": "Household & hygiene",
+    "SAFT": "Non-alcoholic drinks",
+    "KOKEMALT": "Non-alcoholic drinks",
+    "RULL/TRADISJON": "Meat & poultry",
+    "KYLLING/KALKUN": "Meat & poultry",
+    "ROASTBIFF": "Meat & poultry",
+    "SUKKER/SØTNINGSMIDDEL": "Pantry & cooking",
+    "MAJONES": "Pantry & cooking",
+    "HONNING": "Pantry & cooking",
+    "SALT": "Pantry & cooking",
+    "SIRUP": "Pantry & cooking",
+    "FOLIE OG FORMER": "Household & hygiene",
+    "NUDLER": "Pantry & cooking",
+    "SMÅIS (MULTI PACK)": "Snacks & sweets",
+    "SMÅIS (SINGEL PACK)": "Snacks & sweets",
+    "SUKKERVARER SESONG": "Snacks & sweets",
+    "TYGGIS KASSESONE": "Snacks & sweets",
+    "MELONER": "Fruit & vegetables",
+    "SOPP": "Fruit & vegetables",
+    "KÅL": "Fruit & vegetables",
+    "PÆRER": "Fruit & vegetables",
+    "EKSOTISK": "Fruit & vegetables",
+    "KAVIAR": "Fish & seafood",
+    "GRØT": "Breakfast cereals",
+    "UNKNOWN": "Unclassified"
+  },
+  "rules": [
+    {
+      "terms": [
+        "ØL ",
+        "VIN",
+        "CIDER",
+        "RUSBRUS",
+        "SESONG: ØL"
+      ],
+      "target": "Alcohol",
+      "mode": "startswith"
+    },
+    {
+      "terms": [
+        "BLEIER",
+        "BARNEMAT",
+        "BABY",
+        "BARNE"
+      ],
+      "target": "Baby & child",
+      "mode": "contains"
+    },
+    {
+      "terms": [
+        "DORULL",
+        "TOALETT",
+        "KJØKKENPAPIR",
+        "OPPVASK",
+        "KLESVASK",
+        "HUSVASK",
+        "SÅPE",
+        "HYGIENE",
+        "KOSMETIKK",
+        "MUNNHYGIENE",
+        "LOMMETØRKLE",
+        "PLAST OG POSER",
+        "BÆREPOSER",
+        "PAPIR - KJØKKEN"
+      ],
+      "target": "Household & hygiene",
+      "mode": "contains"
+    },
+    {
+      "terms": [
+        "STORFE",
+        "SVIN",
+        "LAM",
+        "KJØTT",
+        "SALAMI",
+        "BACON",
+        "SKINKE",
+        "SPEKE",
+        "PØLSE",
+        "BURGER",
+        "KARBONADE",
+        "HVITT KJØTT",
+        "RIBBE",
+        "KYLLING",
+        "KALKUN"
+      ],
+      "target": "Meat & poultry",
+      "mode": "contains"
+    },
+    {
+      "terms": [
+        "FISK",
+        "LAKS",
+        "ØRRET",
+        "SKALLDYR"
+      ],
+      "target": "Fish & seafood",
+      "mode": "contains"
+    },
+    {
+      "terms": [
+        "MELK",
+        "YOGHURT",
+        "OST",
+        "SMØR",
+        "MARGARIN",
+        "EGG",
+        "RØMME",
+        "FLØTE"
+      ],
+      "target": "Dairy & eggs",
+      "mode": "contains"
+    },
+    {
+      "terms": [
+        "TOMAT",
+        "AVOCADO",
+        "LØK",
+        "BANAN",
+        "EPL",
+        "AGURK",
+        "PAPRIKA",
+        "BÆR",
+        "POTETER",
+        "STENFRUKT",
+        "DRUER",
+        "GULROT",
+        "SITRUS",
+        "SALAT",
+        "GRØNN",
+        "GRØNT",
+        "URTER"
+      ],
+      "target": "Fruit & vegetables",
+      "mode": "contains"
+    },
+    {
+      "terms": [
+        "BRUS",
+        "JUICE",
+        "VANN",
+        "MINERALVANN",
+        "LESKEDRIKK",
+        "KAFFE",
+        "TE"
+      ],
+      "target": "Non-alcoholic drinks",
+      "mode": "contains"
+    },
+    {
+      "terms": [
+        "SJOKOLADE",
+        "SNACK",
+        "CHIPS",
+        "KJEKS",
+        "GODT"
+      ],
+      "target": "Snacks & sweets",
+      "mode": "contains"
+    },
+    {
+      "terms": [
+        "BRØD",
+        "BAKERI",
+        "SMÅBR",
+        "HAMBURGERBRØD",
+        "JULEKAKE",
+        "PAIBUNN"
+      ],
+      "target": "Bread & bakery",
+      "mode": "contains"
+    },
+    {
+      "terms": [
+        "PASTA",
+        "KRYDDER",
+        "SYLTETØY",
+        "RIS/ETNISK",
+        "MEL/GRYN",
+        "OLJE",
+        "DRESSING",
+        "EDDIK",
+        "KONSERVER",
+        "HERMETIKK",
+        "SENNEP",
+        "KETCHUP"
+      ],
+      "target": "Pantry & cooking",
+      "mode": "contains"
+    },
+    {
+      "terms": [
+        "DYPFRYST",
+        "PIZZA",
+        "FERDIGRETTER",
+        "SUPPER",
+        "SAUS"
+      ],
+      "target": "Frozen & convenience",
+      "mode": "contains"
+    },
+    {
+      "terms": [
+        "CEREAL"
+      ],
+      "target": "Breakfast cereals",
+      "mode": "contains"
+    },
+    {
+      "terms": [
+        "PLANTER"
+      ],
+      "target": "Non-grocery / seasonal",
+      "mode": "contains"
+    }
+  ]
+}

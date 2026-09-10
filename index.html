@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Personal economics</title>
+  <link rel="stylesheet" href="web/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <p class="eyebrow">PERSONAL ECONOMICS</p>
+        <h1>Spending explorer</h1>
+        <p id="status">Loading JSON data and configuration…</p>
+      </div>
+      <div class="header-actions">
+        <label class="button primary" for="fileInput">Add JSON files</label>
+        <input id="fileInput" type="file" accept=".json,application/json" multiple hidden>
+        <button id="clearData" type="button">Clear browser data</button>
+      </div>
+    </header>
+
+    <section id="dropZone" class="drop-zone">
+      <strong>Drop data or configuration JSON here</strong>
+      <span>REMA, Oda, canonical rows, and the files in <code>config/</code> are detected automatically.</span>
+    </section>
+
+    <section class="panel filters">
+      <label>Source<select id="source"><option>All</option></select></label>
+      <label>Main category<select id="main"><option>All</option></select></label>
+      <label>Subcategory<select id="sub"><option>All</option></select></label>
+      <label>Search<input id="search" type="search" placeholder="Product, merchant, category…"></label>
+      <label>From<input id="dateFrom" type="date"></label>
+      <label>To<input id="dateTo" type="date"></label>
+      <button id="reset" type="button">Reset filters</button>
+    </section>
+
+    <section class="metrics">
+      <article><span>Total spend</span><strong id="totalSpend">0 kr</strong></article>
+      <article><span>Purchase lines</span><strong id="lineCount">0</strong></article>
+      <article><span>Products</span><strong id="productCount">0</strong></article>
+      <article><span>Transactions</span><strong id="transactionCount">0</strong></article>
+    </section>
+
+    <section class="grid category-grid">
+      <article class="panel"><h2>Spend by main category</h2><div id="categoryChart" class="chart"></div></article>
+      <article class="panel"><h2>Spend by subcategory</h2><div id="subcategoryChart" class="chart"></div></article>
+    </section>
+
+    <section class="timeline-grid">
+      <article class="panel"><h2>Average spend by weekday</h2><p class="chart-note">Average per calendar day</p><div id="weekdayChart" class="chart"></div></article>
+      <article class="panel"><h2>Average monthly spend</h2><p class="chart-note">Average for each calendar month across years</p><div id="monthChart" class="chart"></div></article>
+      <article class="panel"><h2>Average spend by year</h2><p class="chart-note">Average per active calendar day</p><div id="yearChart" class="chart"></div></article>
+    </section>
+
+    <section class="panel">
+      <div class="table-heading"><h2>Purchase line items</h2><span id="visibleCount"></span></div>
+      <div class="mapping-tools">
+        <label>Main category<select id="mapMain"></select></label>
+        <label>Subcategory<select id="mapSub"></select></label>
+        <button id="applyMapping" class="primary" type="button" disabled>Apply to selected</button>
+        <button id="exportSelected" type="button" disabled>Export selected CSV</button>
+        <button id="downloadMappings" type="button" disabled>Download mappings</button>
+        <p id="mappingStatus">Select one or more purchase line items below to recategorise them.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th class="select-cell"><input id="selectVisible" type="checkbox" aria-label="Select all visible purchase line items"></th>
+            <th data-sort="source">Source</th>
+            <th data-sort="main">Main</th>
+            <th data-sort="sub">Subcategory</th>
+            <th data-sort="product">Product</th>
+            <th data-sort="family">Family</th>
+            <th data-sort="raw">Raw category</th>
+            <th class="number" data-sort="lines">Purchase lines</th>
+            <th class="number" data-sort="quantity">Quantity</th>
+            <th class="number" data-sort="average">Average price</th>
+            <th class="number" data-sort="spend">Total spend</th>
+          </tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <p class="privacy-note">Imported data stays in this browser and is never uploaded by the application.</p>
+    </section>
+
+    <details class="panel help">
+      <summary>JSON conventions</summary>
+      <p>The app automatically reads the five resource files in <code>config/</code>. Data files are never loaded automatically: add them with the file picker or drop them onto the page. Imported data is retained in this browser.</p>
+    </details>
+  </main>
+  <script defer src="web/default-config.js"></script>
+  <script defer src="web/app.js"></script>
+</body>
+</html>

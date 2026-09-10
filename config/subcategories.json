@@ -1,0 +1,756 @@
+{
+  "Alcohol": [
+    {
+      "terms": [
+        "IPA"
+      ],
+      "target": "IPA"
+    },
+    {
+      "terms": [
+        "CIDER"
+      ],
+      "target": "Cider"
+    },
+    {
+      "target": "Øl",
+      "terms": []
+    }
+  ],
+  "Baby & child": [
+    {
+      "terms": [
+        "BLEIE"
+      ],
+      "target": "Diapers"
+    },
+    {
+      "terms": [
+        "WIPE",
+        "VÅTSERVIETT",
+        "STELLEKLUT"
+      ],
+      "target": "Wipes & changing"
+    },
+    {
+      "terms": [
+        "BARNEMAT",
+        "COUSCOUS"
+      ],
+      "target": "Baby food"
+    },
+    {
+      "terms": [
+        "AMME"
+      ],
+      "target": "Breastfeeding"
+    },
+    {
+      "terms": [
+        "BABYOLJE"
+      ],
+      "target": "Baby care"
+    }
+  ],
+  "Bread & bakery": [
+    {
+      "terms": [
+        "KNEKKEBRØD"
+      ],
+      "target": "Crispbread"
+    },
+    {
+      "terms": [
+        "HAMBURGERBRØD",
+        "SMÅBR"
+      ],
+      "target": "Buns & rolls"
+    },
+    {
+      "terms": [
+        "JULEKAKE",
+        "HVETEBRØD",
+        "BAKST"
+      ],
+      "target": "Sweet/seasonal bakery"
+    },
+    {
+      "terms": [
+        "BRØDMIX",
+        "BRØDMEL"
+      ],
+      "target": "Bread mixes"
+    },
+    {
+      "terms": [
+        "BRØD",
+        "RUGBRØD"
+      ],
+      "target": "Fresh bread"
+    }
+  ],
+  "Breakfast cereals": [
+    {
+      "terms": [
+        "MÜSLI",
+        "MUSLI"
+      ],
+      "target": "Muesli"
+    },
+    {
+      "terms": [
+        "WEETABIX",
+        "HAVREFRAS",
+        "FITNESS",
+        "CEREAL"
+      ],
+      "target": "Breakfast cereal"
+    },
+    {
+      "terms": [
+        "GRØT"
+      ],
+      "target": "Porridge"
+    }
+  ],
+  "Dairy & eggs": [
+    {
+      "terms": [
+        "MELK"
+      ],
+      "target": "Milk"
+    },
+    {
+      "terms": [
+        "YOGHURT",
+        "YOGURT"
+      ],
+      "target": "Yoghurt"
+    },
+    {
+      "terms": [
+        "EGG"
+      ],
+      "target": "Eggs"
+    },
+    {
+      "terms": [
+        "BRUNOST"
+      ],
+      "target": "Brown cheese"
+    },
+    {
+      "terms": [
+        "OST",
+        "MOZZARELLA",
+        "PARMIGIANO"
+      ],
+      "target": "Cheese"
+    },
+    {
+      "terms": [
+        "SMØR",
+        "MARGARIN"
+      ],
+      "target": "Butter & margarine"
+    },
+    {
+      "terms": [
+        "RØMME",
+        "FLØTE"
+      ],
+      "target": "Cream & sour cream"
+    }
+  ],
+  "Fish & seafood": [
+    {
+      "terms": [
+        "LAKS",
+        "ØRRET"
+      ],
+      "target": "Salmon & trout"
+    },
+    {
+      "terms": [
+        "TORSK",
+        "HVIT"
+      ],
+      "target": "White fish"
+    },
+    {
+      "terms": [
+        "SKALLDYR",
+        "SCAMPI"
+      ],
+      "target": "Shellfish"
+    },
+    {
+      "terms": [
+        "FISKEGRATENG"
+      ],
+      "target": "Fish gratin"
+    },
+    {
+      "terms": [
+        "FISKEBURGER",
+        "FISKEKAKER"
+      ],
+      "target": "Fish burgers & cakes"
+    },
+    {
+      "terms": [
+        "KAVIAR",
+        "MAKRELL",
+        "FISKEPÅLEGG"
+      ],
+      "target": "Fish spreads"
+    }
+  ],
+  "Frozen & convenience": [
+    {
+      "terms": [
+        "PIZZA",
+        "BIGONE",
+        "GRANDIOSA",
+        "RISTORANTE",
+        "PEPPES"
+      ],
+      "target": "Frozen pizza"
+    },
+    {
+      "terms": [
+        "SUPPE"
+      ],
+      "target": "Soup"
+    },
+    {
+      "terms": [
+        "SAUS",
+        "BEARNAISE"
+      ],
+      "target": "Ready-made sauces"
+    },
+    {
+      "terms": [
+        "FERDIGRETT",
+        "FJORDLAND"
+      ],
+      "target": "Ready meals"
+    }
+  ],
+  "Fruit & vegetables": [
+    {
+      "terms": [
+        "TOMAT"
+      ],
+      "target": "Tomatoes"
+    },
+    {
+      "terms": [
+        "AVOCADO"
+      ],
+      "target": "Avocado"
+    },
+    {
+      "terms": [
+        "EPLE",
+        "BANAN",
+        "PÆRE",
+        "DRUE",
+        "MANGO",
+        "MELON",
+        "SITRUS",
+        "APPELSIN",
+        "MANDARIN",
+        "NEKTARIN",
+        "PLOMME",
+        "STENFRUKT"
+      ],
+      "target": "Fresh fruit"
+    },
+    {
+      "terms": [
+        "BÆR"
+      ],
+      "target": "Berries"
+    },
+    {
+      "terms": [
+        "URT",
+        "BASILIKUM",
+        "KORIANDER",
+        "PERSILLE",
+        "GRESSLØK"
+      ],
+      "target": "Fresh herbs"
+    },
+    {
+      "terms": [
+        "SALAT",
+        "AGURK"
+      ],
+      "target": "Salad & cucumber"
+    },
+    {
+      "terms": [
+        "POTET",
+        "GULROT",
+        "SØTPOTET"
+      ],
+      "target": "Root vegetables"
+    },
+    {
+      "terms": [
+        "LØK"
+      ],
+      "target": "Onions"
+    },
+    {
+      "terms": [
+        "PAPRIKA"
+      ],
+      "target": "Peppers"
+    },
+    {
+      "terms": [
+        "SOPP"
+      ],
+      "target": "Mushrooms"
+    },
+    {
+      "terms": [
+        "KÅL"
+      ],
+      "target": "Cabbage"
+    },
+    {
+      "terms": [
+        "GRØNNSAKSHERMETIKK"
+      ],
+      "target": "Canned vegetables"
+    },
+    {
+      "terms": [
+        "DYPFRYSTE GRØNNSAKER"
+      ],
+      "target": "Frozen vegetables"
+    }
+  ],
+  "Health & supplements": [
+    {
+      "terms": [
+        "TRAN",
+        "OMEGA"
+      ],
+      "target": "Omega-3 / supplements"
+    }
+  ],
+  "Household & hygiene": [
+    {
+      "terms": [
+        "BÆREPOSE",
+        "HANDLENETT"
+      ],
+      "target": "Shopping bags"
+    },
+    {
+      "terms": [
+        "DORULL",
+        "TOALETT",
+        "KJØKKENPAPIR",
+        "TORKY",
+        "MATPAPIR"
+      ],
+      "target": "Paper products"
+    },
+    {
+      "terms": [
+        "KLESVASK",
+        "BLENDA",
+        "TØYVASK",
+        "TØYMYKNER"
+      ],
+      "target": "Laundry"
+    },
+    {
+      "terms": [
+        "OPPVASK"
+      ],
+      "target": "Dishwashing"
+    },
+    {
+      "terms": [
+        "HUSVASK",
+        "JIF"
+      ],
+      "target": "Cleaning"
+    },
+    {
+      "terms": [
+        "SÅPE",
+        "SHAMPOO",
+        "BALSAM",
+        "DEODORANT"
+      ],
+      "target": "Personal care"
+    },
+    {
+      "terms": [
+        "TANNKREM",
+        "MUNNHYGIENE"
+      ],
+      "target": "Oral care"
+    },
+    {
+      "terms": [
+        "BARBER",
+        "VENUS"
+      ],
+      "target": "Shaving"
+    },
+    {
+      "terms": [
+        "BIND",
+        "TAMPONG"
+      ],
+      "target": "Feminine care"
+    },
+    {
+      "terms": [
+        "AVFALL",
+        "PLAST",
+        "FOLIE"
+      ],
+      "target": "Bags, foil & storage"
+    }
+  ],
+  "Meat & poultry": [
+    {
+      "terms": [
+        "KYLLING",
+        "KALKUN",
+        "HVITT KJØTT"
+      ],
+      "target": "Chicken & turkey"
+    },
+    {
+      "terms": [
+        "KJØTTDEIG",
+        "KARBONADEDEIG",
+        "BURGER"
+      ],
+      "target": "Mince & burgers"
+    },
+    {
+      "terms": [
+        "STORFE",
+        "BIFF",
+        "ROASTBIFF"
+      ],
+      "target": "Beef"
+    },
+    {
+      "terms": [
+        "SVIN",
+        "RIBBE"
+      ],
+      "target": "Pork"
+    },
+    {
+      "terms": [
+        "LAM"
+      ],
+      "target": "Lamb"
+    },
+    {
+      "terms": [
+        "BACON"
+      ],
+      "target": "Bacon"
+    },
+    {
+      "terms": [
+        "SALAMI",
+        "SPEKE",
+        "SKINKE",
+        "RULL",
+        "SYLTE"
+      ],
+      "target": "Cold cuts & cured meat"
+    },
+    {
+      "terms": [
+        "PØLSE"
+      ],
+      "target": "Sausages"
+    },
+    {
+      "terms": [
+        "AND"
+      ],
+      "target": "Duck"
+    }
+  ],
+  "Misc food / unclear": [
+    {
+      "terms": [
+        "LOMPE",
+        "TORTILLA"
+      ],
+      "target": "Flatbreads & wraps"
+    },
+    {
+      "terms": [
+        "DIPLOM-IS"
+      ],
+      "target": "Ice cream"
+    },
+    {
+      "terms": [
+        "GJÆR",
+        "CHIA",
+        "SOLSIKKE"
+      ],
+      "target": "Baking & seeds"
+    },
+    {
+      "terms": [
+        "LAPSKAUS"
+      ],
+      "target": "Ready meals"
+    }
+  ],
+  "Non-alcoholic drinks": [
+    {
+      "terms": [
+        " TE ",
+        "TEA",
+        "EARL GREY",
+        "ENGLISH BREAKFAST",
+        "PG TIPS",
+        "TWININGS",
+        "LIPTON",
+        "PUKKA",
+        "YOGI TEA",
+        "CLIPPER"
+      ],
+      "target": "Tea"
+    },
+    {
+      "terms": [
+        "KAFFE",
+        "FILTERMALT",
+        "KOKEMALT"
+      ],
+      "target": "Coffee"
+    },
+    {
+      "terms": [
+        "JUICE",
+        "SUNNIVA"
+      ],
+      "target": "Juice"
+    },
+    {
+      "terms": [
+        "BRUS",
+        "PEPSI",
+        "COCA COLA",
+        "SOLO",
+        "LESKEDRIKK"
+      ],
+      "target": "Soft drinks"
+    },
+    {
+      "terms": [
+        "SPARKLING"
+      ],
+      "target": "Premium sparkling drinks"
+    },
+    {
+      "terms": [
+        "VANN",
+        "FARRIS",
+        "MINERALVANN"
+      ],
+      "target": "Water & mineral water"
+    },
+    {
+      "terms": [
+        "SJOKOLADEPULVER",
+        "O'BOY"
+      ],
+      "target": "Chocolate drinks"
+    }
+  ],
+  "Non-grocery / seasonal": [
+    {
+      "terms": [
+        "TULIPAN",
+        "LILJE",
+        "NELLING",
+        "PLANTE"
+      ],
+      "target": "Flowers & plants"
+    },
+    {
+      "terms": [
+        "BLADER",
+        "TIDSKRIFT"
+      ],
+      "target": "Magazines"
+    },
+    {
+      "terms": [
+        "JULEPAPIR"
+      ],
+      "target": "Seasonal supplies"
+    }
+  ],
+  "Pantry & cooking": [
+    {
+      "terms": [
+        "PASTA",
+        "TAGLIATELLE",
+        "TORTELL",
+        "PERLINE"
+      ],
+      "target": "Pasta"
+    },
+    {
+      "terms": [
+        "RIS"
+      ],
+      "target": "Rice"
+    },
+    {
+      "terms": [
+        "KRYDDER",
+        "SPISSKUMMEN",
+        "OREGANO"
+      ],
+      "target": "Spices & seasoning"
+    },
+    {
+      "terms": [
+        "SAUS",
+        "PESTO",
+        "MAJONES",
+        "KETCHUP",
+        "SENNEP",
+        "AIOLI"
+      ],
+      "target": "Sauces & condiments"
+    },
+    {
+      "terms": [
+        "MEL",
+        "SUKKER",
+        "SIRUP",
+        "VANILJESUKKER",
+        "HORNSALT"
+      ],
+      "target": "Baking staples"
+    },
+    {
+      "terms": [
+        "OLJE",
+        "EDDIK"
+      ],
+      "target": "Oil & vinegar"
+    },
+    {
+      "terms": [
+        "SYLTETØY",
+        "HONNING"
+      ],
+      "target": "Spreads"
+    },
+    {
+      "terms": [
+        "GRØNNSAKSHERMETIKK",
+        "KONSERVER"
+      ],
+      "target": "Canned/jarred goods"
+    },
+    {
+      "terms": [
+        "TEX MEX",
+        "TORTILLA"
+      ],
+      "target": "Tex-Mex"
+    },
+    {
+      "terms": [
+        "NUDLER"
+      ],
+      "target": "Noodles"
+    }
+  ],
+  "Snacks & sweets": [
+    {
+      "terms": [
+        "SMÅGODT",
+        "CANDYKING"
+      ],
+      "target": "Pick-and-mix candy"
+    },
+    {
+      "terms": [
+        "SJOKOLADE",
+        "SMASH",
+        "NON STOP",
+        "POPS",
+        "STRATOS",
+        "KINDER",
+        "KVIKK",
+        "NEW ENERGY",
+        "TWIST"
+      ],
+      "target": "Chocolate"
+    },
+    {
+      "terms": [
+        "CHIPS",
+        "KJELECHIPS"
+      ],
+      "target": "Chips"
+    },
+    {
+      "terms": [
+        "DIPLOM-IS",
+        "SMÅIS"
+      ],
+      "target": "Ice cream"
+    },
+    {
+      "terms": [
+        "KJEKS",
+        "PEPPERKAKE"
+      ],
+      "target": "Biscuits & cookies"
+    },
+    {
+      "terms": [
+        "NØTT"
+      ],
+      "target": "Nuts"
+    },
+    {
+      "terms": [
+        "GODTERI",
+        "SEIG",
+        "MARSHMALLOW",
+        "TYGGIS",
+        "SUKKERVARER"
+      ],
+      "target": "Other candy"
+    },
+    {
+      "terms": [
+        "DIPMIX"
+      ],
+      "target": "Dips"
+    }
+  ]
+}
