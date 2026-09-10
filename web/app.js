@@ -4,6 +4,7 @@ const CONFIG_PATHS = [
   'config/product_overrides.json',
   'config/product_family.json',
 ];
+const PROPOSAL_ENDPOINT = 'https://spending-category-proposals.spendingtools.workers.dev';
 const STORAGE_KEY = 'personal-economics-static-data-v1';
 const OVERRIDE_STORAGE_KEY = 'personal-economics-mapping-overrides-v1';
 const $ = id => document.getElementById(id);
@@ -16,6 +17,7 @@ const tableSort = { key: 'spend', direction: -1 };
 const selectedItems = new Set();
 const pendingOverrides = new Map();
 let selectionAnchorKey = null;
+let submittingProposal = false;
 const money = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 0 });
 const number = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 2 });
 
@@ -265,6 +267,8 @@ function updateMappingState() {
   $('applyMapping').disabled = !selectedItems.size || !$('mapMain').value || !$('mapSub').value;
   $('exportSelected').disabled = !selectedItems.size;
   $('downloadMappings').disabled = !pendingOverrides.size;
+  $('submitProposal').disabled = !pendingOverrides.size || submittingProposal;
+  $('submitProposal').textContent = submittingProposal ? 'Submitting…' : 'Submit as pull request';
   $('mappingStatus').textContent = pendingOverrides.size
     ? `${number.format(selectedItems.size)} selected; ${number.format(pendingOverrides.size)} product mapping change(s) ready.`
     : selectedItems.size ? `${number.format(selectedItems.size)} purchase line item(s) selected.` : 'Select one or more purchase line items below to recategorise them.';
@@ -294,9 +298,52 @@ function applySelectedMappings() {
     pendingOverrides.set(key, mapping);
   }
   localStorage.setItem(OVERRIDE_STORAGE_KEY, JSON.stringify(state.config.overrides));
+  $('proposalStatus').replaceChildren();
+  $('proposalStatus').className = 'proposal-status';
   selectedItems.clear();
   deduplicateAndReclassify();
   render();
+}
+async function submitMappings() {
+  if (!pendingOverrides.size || submittingProposal) return;
+
+  const count = pendingOverrides.size;
+  const confirmed = window.confirm(
+    `Create a public pull request containing ${number.format(count)} product name${count === 1 ? '' : 's'} and the proposed category mappings?\n\nNo transaction records, prices, dates, or addresses will be sent.`,
+  );
+  if (!confirmed) return;
+
+  const status = $('proposalStatus');
+  submittingProposal = true;
+  status.className = 'proposal-status';
+  status.textContent = 'Creating pull request…';
+  updateMappingState();
+
+  try {
+    const response = await fetch(PROPOSAL_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ changes: Object.fromEntries(pendingOverrides) }),
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(result.error || `Request failed with status ${response.status}.`);
+    if (!result.pullRequestUrl) throw new Error('The Worker did not return a pull-request link.');
+
+    const link = document.createElement('a');
+    link.href = result.pullRequestUrl;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = result.pullRequestNumber ? `pull request #${result.pullRequestNumber}` : 'the pull request';
+    status.replaceChildren(document.createTextNode('Created '), link, document.createTextNode('. It is ready for review.'));
+    status.className = 'proposal-status success';
+    pendingOverrides.clear();
+  } catch (error) {
+    status.textContent = `Could not create the pull request: ${error.message}`;
+    status.className = 'proposal-status error';
+  } finally {
+    submittingProposal = false;
+    updateMappingState();
+  }
 }
 function downloadMappings() {
   const blob = new Blob([`${JSON.stringify(state.config.overrides, null, 2)}\n`], { type: 'application/json' });
@@ -438,6 +485,7 @@ function wireEvents() {
   $('applyMapping').onclick = applySelectedMappings;
   $('exportSelected').onclick = exportSelectedItems;
   $('downloadMappings').onclick = downloadMappings;
+  $('submitProposal').onclick = submitMappings;
   $('selectVisible').onchange = event => {
     for (const item of sortedItems(groupedItems(filteredRows())).slice(0, 1000)) {
       if (event.target.checked) selectedItems.add(item.key); else selectedItems.delete(item.key);

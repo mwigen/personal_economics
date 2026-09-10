@@ -40,6 +40,13 @@ current session.
 After recategorizing selected products in the table, use **Download mappings**
 to save an updated `product_overrides.json`.
 
+On the hosted site, **Submit as pull request** sends only the selected product
+names and proposed mappings to the project's Cloudflare Worker. The Worker
+creates a branch and opens a pull request against `main`; it does not upload
+transaction records, prices, dates, addresses, or imported files. A repository
+maintainer must review and merge the pull request before it changes the public
+configuration.
+
 When configuration JSON changes, update `web/default-config.js` as well so direct
 local-file use has matching defaults.
 
@@ -48,5 +55,6 @@ local-file use has matching defaults.
 Files under `data/` are ignored by Git and are never requested automatically.
 Raw exports can contain names, addresses, order identifiers, purchase history,
 and other personal information. Never commit real exports. Review custom
-product mappings before publishing them because they may reveal personal
-purchases or habits.
+product mappings before submitting them because product names and mappings are
+published in the resulting pull request and may reveal personal purchases or
+habits.
